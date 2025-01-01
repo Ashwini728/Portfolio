@@ -6,7 +6,7 @@ Welcome to my portfolio website! This site showcases my work, projects, and skil
 ## Features
 
 - **Home Page**: Introduction to who I am and ways to connect with me.
-- **About**: 
+- **About** : A section detailing my journey as a developer, skills, and goals. 
 - **Projects**: A section dedicated to showcasing the projects I've worked on. Each project includes a description, technologies used, and links to the live version or GitHub repository.
 - **Contact**: A page with a contact form to get in touch with me or follow me on social media.
 - **Responsive Design**: Optimized for all devices, including mobile and tablet.
