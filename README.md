@@ -14,7 +14,7 @@ Welcome to my portfolio website! This site showcases my work, projects, and skil
 ## Technologies Used
 
 - **Frontend**: React, HTML, CSS, JavaScript
-- **Other**: Git, GitHub, APIs
+- **Other**: Git, GitHub
 
 ## Setup
 
