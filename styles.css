@@ -236,7 +236,7 @@ header nav a:hover {
 
 .about-image {
     border-radius: 15px;
-    max-width: 50%;
+    max-width: 40%;
     box-shadow: 0px 4px 20px rgb(0, 0, 0);
     transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
@@ -345,18 +345,21 @@ header nav a:hover {
 
 /* Portfolio Section */
 .portfolio {
-    background-color: #111827;
+    background-color: #111827; /* Retaining original background color */
     color: white;
     padding-bottom: 2cm;
+    position: relative;
 }
 
 .portfolio h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #38bdf8;
+    color: #38bdf8; /* Retained original color */
     padding-top: 0.5cm;
     padding-bottom: 0.5cm;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-out;
 }
 
 .portfolio-items {
@@ -365,15 +368,17 @@ header nav a:hover {
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 20px;
+    animation: fadeIn 1s ease-out;
 }
 
 .portfolio-item {
     width: 300px;
-    background-color: #1f2937;
-    border-radius: 10px;
+    background-color: #1f2937; /* Retained original color */
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
 }
 
 /* Hover Effect */
@@ -387,38 +392,54 @@ header nav a:hover {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Image zoom effect on hover */
 }
 
 /* Title Styling */
 .portfolio-item h3 {
     margin: 20px;
-    font-size: 1.25rem;
-    color: #38bdf8;
+    font-size: 1.5rem;
+    color: #38bdf8; /* Retained original color */
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 /* Description Styling */
 .portfolio-item p {
     margin: 0 20px 20px;
-    font-style: oblique;
+    font-style: italic;
     text-align: left;
     font-size: 1rem;
     color: #d1d5db;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.portfolio-item:hover p {
+    color: #f0f0f0;
 }
 
 /* Read More Button */
 .read-more-btn {
-    background-color: #38bdf8;
+    background-color: #38bdf8; /* Retained original color */
     color: rgb(239, 244, 245);
     font-size: 1rem;
     border: none;
     cursor: pointer;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .read-more-btn:hover {
     background-color: #066b81;
+    transform: translateY(-3px);
 }
 
 /* Make anchor tag a block-level element */
@@ -428,34 +449,35 @@ header nav a:hover {
     text-decoration: none; /* Remove underline from link */
 }
 
-/* Full Description */
-.full-description {
-    display: none;
-    transition: max-height 0.3s ease-out;
-    overflow: hidden;
-    max-height: 0;
+/* Title hover color change */
+.portfolio-item:hover h3 {
+    color: #38bdf8; /* Retained original color */
 }
 
-.full-description.show {
-    display: block;
-    max-height: 1000px;
+/* Animation for fading in */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
-
 
 /* Contact Section */
 .contact {
-    background-color: #1f2937;
+    background-color: #1f2937; /* Retained original background color */
     color: white;
     padding-bottom: 1cm;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .contact h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #38bdf8;
+    color: #ffffff;
     padding-top: 0.5cm;
     padding-bottom: 0.5cm;
+    transition: color 0.3s ease;
 }
 
 .contact form {
@@ -463,6 +485,7 @@ header nav a:hover {
     gap: 15px;
     max-width: 500px;
     margin: 0 auto;
+    animation: slideUp 0.8s ease-out;
 }
 
 .contact label {
@@ -477,10 +500,13 @@ header nav a:hover {
     background-color: #111827;
     color: white;
     font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .contact input:focus, .contact textarea:focus {
     outline: 2px solid #38bdf8;
+    background-color: #374151;
+    transform: scale(1.05);
 }
 
 .contact button {
@@ -491,11 +517,42 @@ header nav a:hover {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .contact button:hover {
     background-color: #0284c7;
+    transform: scale(1.1);
 }
+
+.contact .error {
+    color: red;
+    font-size: 0.875rem;
+    display: none;
+    margin-top: -10px;
+}
+
+.contact .success {
+    background-color: #38bdf8;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+    border-radius: 5px;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Footer */
 footer {
     background-color: #111827;

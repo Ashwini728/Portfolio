@@ -54,5 +54,45 @@ function typeText() {
 }
 
 typeText();
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    let isValid = true;
+    
+    // Reset error messages
+    document.querySelectorAll(".error").forEach(function(error) {
+        error.style.display = "none";
+    });
+    
+    // Validate Name
+    let name = document.getElementById("name");
+    if (name.value.trim() === "") {
+        document.getElementById("name-error").style.display = "inline-block";
+        isValid = false;
+    }
+    
+    // Validate Email
+    let email = document.getElementById("email");
+    if (!email.value.match(/^[^ ]+@[^ ]+\.[a-z]{2,3}$/)) {
+        document.getElementById("email-error").style.display = "inline-block";
+        isValid = false;
+    }
+    
+    // Validate Message
+    let message = document.getElementById("message");
+    if (message.value.trim() === "") {
+        document.getElementById("message-error").style.display = "inline-block";
+        isValid = false;
+    }
+    
+    // Show success message if valid
+    if (isValid) {
+        document.getElementById("contact-form").reset();
+        document.getElementById("success-message").style.display = "block";
+        setTimeout(function() {
+            document.getElementById("success-message").style.display = "none";
+        }, 5000);
+    }
+});
 
 
