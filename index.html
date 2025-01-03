@@ -10,44 +10,47 @@
 </head>
 <body>
 
-<header>
-    <div class="logo">Portfolio.</div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<section class="hero" id="home">
-    <div class="hero-content">
-        <h1>Hello, It's Me <br><span>Ashwini Anil</span></h1>
-        <p>I'm a <strong>3rd year Btech Computer Science Engineering student</strong> with a strong focus on Artificial Intelligence, Machine Learning, and Data Science.</p>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/ashwinii_anil" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/ashwini-anil-9ab336282" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Ashwini728" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://app.tinkerhub.org/u/QPW7HFPG7Z" target="_blank"><i class="fa-solid fa-fire"></i></a>
+    <header>
+        <div class="logo">Portfolio.</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="typing-container">
+                Hello, It's Me <br><span class="typing-text"></span>
+            </h1>                        
+            <p class="animate-fade">
+                I'm a <strong>3rd year Btech Computer Science Engineering student</strong> with a strong focus on Artificial Intelligence, Machine Learning, and Data Science.
+            </p>
+            <div class="social-icons animate-slide">
+                <a href="https://www.instagram.com/ashwinii_anil" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ashwini-anil-9ab336282" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Ashwini728" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://app.tinkerhub.org/u/QPW7HFPG7Z" target="_blank"><i class="fa-solid fa-fire"></i></a>
+            </div>
+            <a href="#" class="btn animate-bounce">Download CV</a>
         </div>
-        <a href="#" class="btn">Download CV</a>
-    </div>
-    <img src="images/port1.png" alt="Profile Picture">
-   
-</section>
-
+        <img src="images/port1.png" alt="Profile Picture" class="hero-image">
+    </section>
+    
 <section class="about" id="about">
     <div class="about-container">
         <img src="images/port2.png" alt="Ashwini Anil" class="about-image">
         <div class="about-content">
             <h2>About Me</h2>
             <p class="about-text">
-                Hi there! I'm <strong>Ashwini Anil</strong>, a driven and innovative 3rd-year B.Tech Computer Science Engineering student with a deep passion for <strong>Artificial Intelligence</strong>, <strong>Machine Learning</strong>, and <strong>Data Science</strong>. My journey in tech is fueled by curiosity and creativity, blending technical expertise with a knack for building dynamic, user-centric web applications. 
+                Hi there! I'm <strong>Ashwini Anil</strong>, a driven and innovative 3rd-year B.Tech Computer Science Engineering student with a deep passion for <strong>Artificial Intelligence</strong>, <strong>Machine Learning</strong>, and <strong>Data Science</strong>. My journey in tech is fueled by curiosity and creativity, blending technical expertise with a knack for building dynamic, user-centric web applications.
                 <span class="more-text">
                     Whether it's crafting visually stunning interfaces or solving challenging problems, I take pride in delivering impactful solutions. My philosophy is rooted in continuous learning, staying at the forefront of emerging technologies, and transforming ideas into reality through code.
                 </span>
             </p>
-            <button class="read-more-btn">Read More</button>
+            <button class="read-more-btn" onclick="toggleAbout()">Read More</button>
             <h3>Skills</h3>
             <ul>
                 <li><strong>Programming:</strong> Python, Java, C</li>
